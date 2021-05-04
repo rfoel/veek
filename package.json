@@ -1,0 +1,14 @@
+{
+  "name": "veek-checkin",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rfoel/veek-checkin.git",
+  "author": "Rafael Franco <rafaelfr@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "checkin": "node index"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^3.0.0"
+  }
+}

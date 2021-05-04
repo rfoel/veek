@@ -1,0 +1,14 @@
+name: Veek Check-in
+
+on:
+  schedule:
+    - cron: '*/50 * * * *'
+
+jobs:
+  checkin:
+    name: Check-in
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn
+      - run: yarn checkin
