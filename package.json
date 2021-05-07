@@ -1,6 +1,6 @@
 {
   "name": "veek",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "index.js",
   "private": true,
   "repository": "git@github.com:rfoel/veek.git",

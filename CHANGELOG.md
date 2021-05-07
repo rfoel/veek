@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rfoel/veek/compare/v1.0.1...v1.1.0) (2021-05-07)
+
+
+### Features
+
+* use next.js with quirrel ([40caac8](https://github.com/rfoel/veek/commit/40caac87899938852d9805fcd4cea9f6dfeee952))
+
 ## [1.0.1](https://github.com/rfoel/veek/compare/v1.0.0...v1.0.1) (2021-05-07)
 
 
