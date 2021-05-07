@@ -1,18 +1,20 @@
 import Hashids from 'hashids'
+
 import getToken from './getToken'
 import lines from './lines'
 import queue from '../pages/api/checkin'
 
-const { encode } = new Hashids()
+const hashids = new Hashids('Veek', 6, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789')
 
 export default async () => {
   try {
     const { token } = await getToken()
     const [line] = await lines(token)
+    const runAt = new Date(line.nextInteraction)
 
     await queue.enqueue(line, {
-      id: encode(line.nextInteraction),
-      runAt: new Date(line.nextInteraction),
+      id: hashids.encode(+runAt),
+      runAt,
       retry: ['1min', '3min', '5min'],
     })
 

@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/rfoel/veek/compare/v2.0.0...v2.1.0) (2021-05-07)
+
+
+### Features
+
+* creat id based on nextInteraction ([91fa449](https://github.com/rfoel/veek/commit/91fa449f91d9bfb88c242c757b082e3ddec14600))
+
 # [2.0.0](https://github.com/rfoel/veek/compare/v1.1.1...v2.0.0) (2021-05-07)
 
 
