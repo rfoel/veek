@@ -5,11 +5,7 @@ export default () =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      code: process.env.OAUTH_CODE,
-      device: {
-        ref: process.env.DEVICE_REF,
-        name: process.env.DEVICE_NAME,
-      },
+      code: process.env.VEEK_OAUTH_CODE,
     }),
   }).then(async response => {
     if (response.status !== 200) throw await response.json()
