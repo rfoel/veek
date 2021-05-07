@@ -3,7 +3,7 @@ import { QuirrelJobHandler } from 'quirrel/vercel'
 import checkin from './checkin'
 import getToken from './getToken'
 import lines from './lines'
-import queue from '../api/checkin'
+import queue from '../pages/api/checkin'
 
 const handler: QuirrelJobHandler<any> = async () => {
   const { token } = await getToken()
