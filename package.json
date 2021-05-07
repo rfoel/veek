@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "hashids": "^2.2.8",
     "next": "^10.2.0",
     "quirrel": "^1.4.4",
     "react": "^17.0.2",

@@ -1,6 +1,9 @@
+import Hashids from 'hashids'
 import getToken from './getToken'
 import lines from './lines'
 import queue from '../pages/api/checkin'
+
+const { encode } = new Hashids()
 
 export default async () => {
   try {
@@ -8,6 +11,7 @@ export default async () => {
     const [line] = await lines(token)
 
     await queue.enqueue(line, {
+      id: encode(line.nextInteraction),
       runAt: new Date(line.nextInteraction),
       retry: ['1min', '3min', '5min'],
     })
