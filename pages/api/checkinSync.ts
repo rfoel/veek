@@ -9,15 +9,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { token } = await getToken()
     await checkin(token)
-    const [{ nextInteraction }] = await lines(token)
+    const [line] = await lines(token)
 
-    await queue.enqueue({} as any, {
-      runAt: nextInteraction,
+    await queue.enqueue(line, {
+      runAt: line.nextInteraction,
       retry: ['1min', '3min', '5min'],
     })
 
     res.status(201).send({
-      message: `Check-in complete. Next interaction will happen at ${nextInteraction}.`,
+      message: `Check-in complete. Next interaction will happen at ${line.nextInteraction}.`,
     })
   } catch (error) {
     res.status(error.statusCode).send({ message: error.message })
