@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/rfoel/veek/compare/v1.1.1...v2.0.0) (2021-05-07)
+
+
+### Features
+
+* create schedule-checkin endpoint ([eed9984](https://github.com/rfoel/veek/commit/eed998450367b4890f6bc9fcc42d0b1e27f3835f))
+
+
+### BREAKING CHANGES
+
+* changed endpoints
+
 ## [1.1.1](https://github.com/rfoel/veek/compare/v1.1.0...v1.1.1) (2021-05-07)
 
 
