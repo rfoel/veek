@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/rfoel/veek/compare/v1.0.0...v1.0.1) (2021-05-07)
+
+
+### Bug Fixes
+
+* remove quirrel from devDependencies ([620ed41](https://github.com/rfoel/veek/commit/620ed41f7bdb3ed9dac1c9ae4c12d500e72df465))
+
 # 1.0.0 (2021-05-07)
 
 
