@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/rfoel/veek/compare/v1.1.0...v1.1.1) (2021-05-07)
+
+
+### Bug Fixes
+
+* save line as payload ([3c74fde](https://github.com/rfoel/veek/commit/3c74fdeb552e6135f3bcfe6deaf66fcb24e32ebd))
+
 # [1.1.0](https://github.com/rfoel/veek/compare/v1.0.1...v1.1.0) (2021-05-07)
 
 
