@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/rfoel/veek/compare/v2.0.0...v2.1.0) (2021-05-08)
+
+
+### Bug Fixes
+
+* run job as early as possible ([6dece05](https://github.com/rfoel/veek/commit/6dece0538d601f4e01b14cf16b536d1b8499f72c))
+
+
+### Features
+
+* creat id based on nextInteraction ([91fa449](https://github.com/rfoel/veek/commit/91fa449f91d9bfb88c242c757b082e3ddec14600))
+
 # [2.1.0](https://github.com/rfoel/veek/compare/v2.0.0...v2.1.0) (2021-05-07)
 
 
