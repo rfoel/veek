@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import Hashids from 'hashids'
 
 import getToken from './getToken'
@@ -10,7 +11,7 @@ export default async () => {
   try {
     const { token } = await getToken()
     const [line] = await lines(token)
-    const runAt = new Date(line.nextInteraction)
+    const runAt = dayjs(line.nextInteraction).subtract(7, 'minutes').toDate()
 
     await queue.enqueue(line, {
       id: hashids.encode(+runAt),

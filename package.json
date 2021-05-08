@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "dayjs": "^1.10.4",
     "hashids": "^2.2.8",
     "next": "^10.2.0",
     "quirrel": "^1.4.4",
