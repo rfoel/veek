@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 export default () =>
   fetch('https://services.live.veek.com.br/authenticator/oauth2/token', {
     method: 'POST',

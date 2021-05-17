@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 export default (token: string) =>
   fetch('https://services.live.veek.com.br/telecom/lines/checkin', {
     method: 'POST',
