@@ -3,7 +3,7 @@ import Hashids from 'hashids'
 
 import getToken from './getToken'
 import lines from './lines'
-import queue from '../api/checkin'
+import queue from '../queues/checkin'
 
 const hashids = new Hashids('Veek', 6, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789')
 
