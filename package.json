@@ -13,7 +13,7 @@
   "dependencies": {
     "dayjs": "^1.10.4",
     "hashids": "^2.2.8",
-    "quirrel": "^1.4.4"
+    "quirrel": "^1.4.5"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
