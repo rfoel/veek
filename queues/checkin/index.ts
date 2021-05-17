@@ -2,4 +2,4 @@ import { Queue } from 'quirrel/vercel'
 
 import handler from './handler'
 
-export default Queue('checkin', handler)
+export default Queue('api/checkin', handler)
