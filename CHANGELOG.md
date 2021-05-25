@@ -1,3 +1,24 @@
+# [3.0.0](https://github.com/rfoel/veek/compare/v2.0.0...v3.0.0) (2021-05-25)
+
+
+### Bug Fixes
+
+* fix queue endpoint ([a2e9f97](https://github.com/rfoel/veek/commit/a2e9f97f057c79aa661c16bddb8af05a819e9a1c))
+* run job as early as possible ([6dece05](https://github.com/rfoel/veek/commit/6dece0538d601f4e01b14cf16b536d1b8499f72c))
+* use node-fetch ([0f03733](https://github.com/rfoel/veek/commit/0f03733b5bf0998bae06bccc836f24ad674038c2))
+
+
+### Features
+
+* creat id based on nextInteraction ([91fa449](https://github.com/rfoel/veek/commit/91fa449f91d9bfb88c242c757b082e3ddec14600))
+* login using password ([7999364](https://github.com/rfoel/veek/commit/7999364f4e6ca2488cdf7653079496843be26b99))
+* remove next.js dependencies ([09db723](https://github.com/rfoel/veek/commit/09db72334f2476cedc7de21280cbe43590b11fd6))
+
+
+### BREAKING CHANGES
+
+* lighter bundle
+
 # [2.1.0](https://github.com/rfoel/veek/compare/v2.0.0...v2.1.0) (2021-05-08)
 
 
