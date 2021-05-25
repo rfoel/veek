@@ -1,15 +1,16 @@
 import fetch from 'node-fetch'
 
-export default () =>
+import { GetTokenResponse } from '../types/Token'
+
+export default (): Promise<GetTokenResponse> =>
   fetch('https://services.live.veek.com.br/authenticator/oauth2/token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      code: process.env.VEEK_OAUTH_CODE,
+      username: process.env.VEEK_USERNAME,
+      password: process.env.VEEK_PASSWORD,
+      grantType: 'password',
     }),
-  }).then(async response => {
-    if (response.status !== 200) throw await response.json()
-    return response.json()
-  })
+  }).then((response) => response.json())

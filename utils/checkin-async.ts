@@ -1,14 +1,15 @@
 import checkin from './checkin'
 import getToken from './getToken'
+import { CheckInAsyncResponse } from '../types/Token'
 
-export default async () => {
+export default async (): Promise<CheckInAsyncResponse> => {
   try {
-    const { token } = await getToken()
-    await checkin(token)
+    const { accessToken } = await getToken()
+    await checkin(accessToken)
 
     return {
       status: 200,
-      message: `Checked-in successfully`,
+      message: 'Checked-in successfully',
     }
   } catch (error) {
     return {

@@ -4,13 +4,14 @@ import Hashids from 'hashids'
 import getToken from './getToken'
 import lines from './lines'
 import queue from '../queues/checkin'
+import { BaseResponse } from '../types'
 
 const hashids = new Hashids('Veek', 6, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789')
 
-export default async () => {
+export default async (): Promise<BaseResponse> => {
   try {
-    const { token } = await getToken()
-    const [line] = await lines(token)
+    const { accessToken } = await getToken()
+    const [line] = await lines(accessToken)
     const runAt = dayjs(line.nextInteraction).subtract(7, 'minutes').toDate()
 
     await queue.enqueue(line, {
