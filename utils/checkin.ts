@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-import { CheckInResponse } from '../types'
+import { CheckInResponse } from '../types/CheckIn'
 
 export default (token: string): Promise<CheckInResponse> =>
   fetch('https://services.live.veek.com.br/telecom/lines/checkin', {

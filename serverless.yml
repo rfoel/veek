@@ -1,0 +1,29 @@
+frameworkVersion: 2.44.0
+
+service: veek
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: sa-east-1
+  stage: ${opt:stage}
+  timeout: 30
+  deploymentBucket:
+    name: veek-${opt:stage}
+  environment:
+    VEEK_USERNAME: ${file(config.yml):VEEK_USERNAME}
+    VEEK_PASSWORD: ${file(config.yml):VEEK_PASSWORD}
+
+plugins:
+  - serverless-jetpack
+  - serverless-plugin-common-excludes
+  - serverless-plugin-typescript
+
+functions:
+  checkin:
+    handler: handlers/checkin.handler
+    events:
+      - http:
+          path: /checkin
+          method: get
