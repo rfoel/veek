@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/rfoel/veek/compare/v3.0.0...v4.0.0) (2021-06-07)
+
+
+### chore
+
+* use native serverless and EventBridge ([e701e05](https://github.com/rfoel/veek/commit/e701e0500bebe9ecdca5baa17aa30b3e8c7557ec))
+
+
+### BREAKING CHANGES
+
+* Will no longer use Quirrel and Vercel
+
 # [3.0.0](https://github.com/rfoel/veek/compare/v2.0.0...v3.0.0) (2021-05-25)
 
 
