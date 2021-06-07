@@ -4,7 +4,7 @@ Serverless function integrated with Event Bridge to run Veek's check-in on next 
 
 ## Environment variables
 
-| Name                      | Description               |
-| ------------------------- | ------------------------- |
-| VEEK_USERNAME             | Veek username (CPF)       |
-| VEEK_PASSWORD             | Veek password (hashed)    |
+| Name          | Description            | Encrypted |
+| ------------- | ---------------------- | --------- |
+| VEEK_USERNAME | Veek username (CPF)    | false     |
+| VEEK_PASSWORD | Veek password (hashed) | true      |
