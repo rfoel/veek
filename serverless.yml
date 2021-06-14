@@ -11,9 +11,6 @@ provider:
   timeout: 30
   deploymentBucket:
     name: veek-${opt:stage}
-  environment:
-    VEEK_USERNAME: ${file(config.yml):VEEK_USERNAME}
-    VEEK_PASSWORD: ${file(config.yml):VEEK_PASSWORD}
 
 plugins:
   - serverless-jetpack
