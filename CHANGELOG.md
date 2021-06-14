@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/rfoel/veek/compare/v4.0.0...v4.1.0) (2021-06-14)
+
+
+### Features
+
+* use input from EventBridge ([1ad61c6](https://github.com/rfoel/veek/commit/1ad61c68d241129dd04b5ad43f1362233f6990bd))
+
 # [4.0.0](https://github.com/rfoel/veek/compare/v3.0.0...v4.0.0) (2021-06-07)
 
 
