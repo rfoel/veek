@@ -1,7 +1,6 @@
-frameworkVersion: 2.44.0
+frameworkVersion: 2.46.0
 
 service: veek
-useDotenv: true
 
 provider:
   name: aws

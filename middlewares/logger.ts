@@ -1,20 +1,20 @@
-const obfuscate = (data: Record<string, unknown>, filter: string[]) =>
+const obfuscate = (data: Record<string, unknown>, filter: string[] = []) =>
   Object.entries(data).reduce((acc, [key, value]) => {
     if (filter.includes(key)) return { ...acc, [key]: '******' }
     return { ...acc, [key]: value }
   }, {})
 
 const logger = (data: Record<string, unknown>) =>
-  console.log(JSON.stringify(obfuscate(data, ['password']), null, 2))
+  console.log(JSON.stringify(data, null, 2))
 
 const logRequest = (handler) => {
-  logger({ REQUEST: handler.event })
+  logger({ REQUEST: obfuscate(handler.event, ['password']) })
 }
 
 const logResponse = (handler) => {
   logger({
     RESPONSE: {
-      status: handler.response.staus,
+      statusCode: handler.response.statusCode,
       body: JSON.parse(handler.response.body),
     },
   })
