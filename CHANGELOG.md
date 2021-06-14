@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/rfoel/veek/compare/v4.1.0...v4.1.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* fix obfuscate method ([d867128](https://github.com/rfoel/veek/commit/d867128e4cbab6c62f0d434535e4e59c1cf98f35))
+
 # [4.1.0](https://github.com/rfoel/veek/compare/v4.0.0...v4.1.0) (2021-06-14)
 
 
