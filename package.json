@@ -12,7 +12,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@middy/core": "^2.4.1",
+    "@middy/core": "^2.4.3",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
