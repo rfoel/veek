@@ -65,10 +65,10 @@
   resolved "https://registry.yarnpkg.com/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz#8ace5259254426ccef57f3175bc64ed7095ed919"
   integrity sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==
 
-"@middy/core@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@middy/core/-/core-2.4.1.tgz#feb430866b51947266f18bf5996fb3313d092010"
-  integrity sha512-W2MUsc6n+TM27zlauwX0icFaEqgtQoDsKUwFJne2JtvZH29k/cQbjKNauLls06t4ZMVVr9h4O/wjY0cXD/JTdg==
+"@middy/core@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@middy/core/-/core-2.5.3.tgz#312c8efe82f97976d5831ae1628e8fbb1b04afaa"
+  integrity sha512-hCXlRglDu48sl03IjDGjcJwfwElIPAf0fwBu08kqE80qpnouZ1hGH1lZbkbJjAhz6DkSR+79YArUQKUYaM2k1g==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
