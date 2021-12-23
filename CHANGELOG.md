@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/rfoel/veek/compare/v4.1.1...v5.0.0) (2021-12-23)
+
+
+### Features
+
+* update dependencies ([7707b21](https://github.com/rfoel/veek/commit/7707b213afdf993fb2e19d4a60b8e0741046f508))
+
+
+### BREAKING CHANGES
+
+* replace node-fetch with got
+
 ## [4.1.1](https://github.com/rfoel/veek/compare/v4.1.0...v4.1.1) (2021-06-14)
 
 
