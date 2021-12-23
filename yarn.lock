@@ -6593,10 +6593,12 @@ serverless-jetpack@^0.11.1:
     p-limit "^3.1.0"
     trace-deps "^0.4.0"
 
-serverless-plugin-common-excludes@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/serverless-plugin-common-excludes/-/serverless-plugin-common-excludes-3.0.1.tgz#77fc7832f876202cf5a0f0e2bba28974339c2d20"
-  integrity sha512-Orcv3Td1NghSZX0uv5p9ehClhKAx7q9Gljl/rEF6yCfHDbrgStyTPSRy/WZ1mbUsf59ef8NTovI+sabo9L2YXA==
+serverless-plugin-common-excludes@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/serverless-plugin-common-excludes/-/serverless-plugin-common-excludes-4.0.0.tgz#caa1de88d7be8c916b8db35292b0cce0dfd47707"
+  integrity sha512-jOJJ81LKGpEFdXWOCFr58JxtdPL0fWnUpmQsQXV4BHCE4Xs4Gg0F7liLXIBDQXmJlwCzg7oMJq4bm5ZyRONQsA==
+  dependencies:
+    semver "^7.3.5"
 
 serverless-plugin-typescript@^1.1.9:
   version "1.1.9"
