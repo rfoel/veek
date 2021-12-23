@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "preserveConstEnums": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
     "allowJs": true,
-    "target": "es5",
-    "outDir": ".build",
-    "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["es2015"],
-    "rootDir": "./"
+    "lib": ["ES2020"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": ".build",
+    "preserveConstEnums": true,
+    "rootDir": "./",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "ES2020"
   }
 }

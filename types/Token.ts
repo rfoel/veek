@@ -62,8 +62,3 @@ export interface GetTokenResponse {
   client: Client
   user: User
 }
-
-export interface CheckInAsyncResponse {
-  status: number
-  message: string
-}

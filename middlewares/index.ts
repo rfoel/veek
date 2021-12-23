@@ -1,7 +1,7 @@
-import type { APIGatewayProxyHandler } from 'aws-lambda'
 import middy, { MiddyfiedHandler } from '@middy/core'
+import type { Handler } from 'aws-lambda'
 
 import logger from './logger'
 
-export default (handler: APIGatewayProxyHandler): MiddyfiedHandler =>
+export default (handler: Handler): MiddyfiedHandler =>
   middy(handler).use([logger])

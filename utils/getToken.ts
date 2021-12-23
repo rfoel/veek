@@ -1,22 +1,20 @@
-import fetch from 'node-fetch'
+import got from 'got'
 
+import { CheckInEvent } from '../types/CheckIn'
 import { GetTokenResponse } from '../types/Token'
 
-export default ({
+const getToken = ({
   username,
   password,
-}: {
-  username: string
-  password: string
-}): Promise<GetTokenResponse> =>
-  fetch('https://services.live.veek.com.br/authenticator/oauth2/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      username,
-      password,
-      grantType: 'password',
-    }),
-  }).then((response) => response.json())
+}: CheckInEvent): Promise<GetTokenResponse> =>
+  got
+    .post('https://services.live.veek.com.br/authenticator/oauth2/token', {
+      json: {
+        username,
+        password,
+        grantType: 'password',
+      },
+    })
+    .json()
+
+export default getToken

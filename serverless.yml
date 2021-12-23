@@ -1,16 +1,13 @@
-frameworkVersion: 2.46.0
-
 service: veek
 
 provider:
   name: aws
+  lambdaHashingVersion: 20201221
   runtime: nodejs14.x
-  region: sa-east-1
+  region: us-east-2
   stage: ${opt:stage}
   timeout: 30
-  deploymentBucket:
-    name: veek-${opt:stage}
-
+  versionFunctions: false
 plugins:
   - serverless-jetpack
   - serverless-plugin-common-excludes
@@ -19,7 +16,3 @@ plugins:
 functions:
   checkin:
     handler: handlers/checkin.handler
-    events:
-      - http:
-          path: /checkin
-          method: get

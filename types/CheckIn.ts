@@ -1,4 +1,8 @@
-export interface Simcard {
+export interface CheckInEvent {
+  username: string
+  password: string
+}
+export interface SimCard {
   id: number
   iccid: string
   pin: string
@@ -22,6 +26,6 @@ export interface CheckInResponse {
   createdAt: Date
   updatedAt: Date
   deletedAt?: Date
-  simcard: Simcard
+  simcard: SimCard
   portability?: boolean
 }
