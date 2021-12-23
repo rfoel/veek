@@ -16,7 +16,7 @@ jobs:
           node-version: '14'
       - run: yarn ci
       - run: yarn sls config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY }} --secret ${{ secrets.AWS_SECRET_KEY }}
-      - run: yarn deploy prod
+      - run: yarn deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
