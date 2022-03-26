@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.1",
     "semantic-release": "^18.0.1",
     "serverless": "^2.69.1",
     "serverless-jetpack": "^0.11.1",
