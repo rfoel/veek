@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/rfoel/veek/compare/v5.0.0...v5.1.0) (2022-03-26)
+
+
+### Features
+
+* update deps ([e944e62](https://github.com/rfoel/veek/commit/e944e6296d245d643d22df667b8e7cf01ea96031))
+
 # [5.0.0](https://github.com/rfoel/veek/compare/v4.1.1...v5.0.0) (2021-12-23)
 
 
