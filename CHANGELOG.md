@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/rfoel/veek/compare/v5.1.0...v5.1.1) (2022-03-26)
+
+
+### Bug Fixes
+
+* create service layer ([ac70b9e](https://github.com/rfoel/veek/commit/ac70b9e8d75c8e9c83b710e55c2d583f939e551b))
+
 # [5.1.0](https://github.com/rfoel/veek/compare/v5.0.0...v5.1.0) (2022-03-26)
 
 
