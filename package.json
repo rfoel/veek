@@ -32,7 +32,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.1",
     "semantic-release": "^19.0.2",
-    "serverless": "^3.10.0",
+    "serverless": "^3.19.0",
     "serverless-jetpack": "^0.11.1",
     "serverless-plugin-common-excludes": "^4.0.0",
     "serverless-plugin-typescript": "^2.1.1",
