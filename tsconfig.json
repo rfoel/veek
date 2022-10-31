@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "lib": ["ES2020"],
-    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "module": "es2020",
     "moduleResolution": "node",
-    "outDir": ".build",
-    "preserveConstEnums": true,
-    "rootDir": "./",
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "target": "ES2020"
-  }
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2019"
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
 }

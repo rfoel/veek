@@ -4,8 +4,11 @@ Serverless function integrated with Event Bridge to run Veek's check-in on sched
 
 ## Usage
 
-Create an event rule with a fixed rate of `55 minutes` and with a constant JSON being the following:
+Create an event rule with a fixed rate of `30 minutes` and with a constant JSON being the following:
 
-```
-{ username: string, password: string }
+```json
+{
+  "username": "string",
+  "password": "string"
+}
 ```

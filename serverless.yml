@@ -2,16 +2,14 @@ service: veek
 
 provider:
   name: aws
-  runtime: nodejs14.x
-  region: us-east-2
+  runtime: nodejs16.x
+  region: us-east-1
   stage: ${opt:stage}
   timeout: 30
-  versionFunctions: false
+
 plugins:
-  - serverless-jetpack
-  - serverless-plugin-common-excludes
-  - serverless-plugin-typescript
+  - serverless-esbuild
 
 functions:
   checkin:
-    handler: handlers/checkin.handler
+    handler: functions/checkin.handler

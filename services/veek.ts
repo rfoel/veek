@@ -1,7 +1,6 @@
 import got from 'got'
 
-import { CheckInEvent, CheckInResponse } from '../types/CheckIn'
-import { GetTokenResponse } from '../types/Token'
+import { CheckInEvent, CheckInResponse, GetTokenResponse } from '../types'
 
 const baseUrl = 'https://services.live.veek.com.br'
 

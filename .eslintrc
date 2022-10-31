@@ -1,35 +1,31 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["import", "prettier", "@typescript-eslint"],
-
+  "plugins": ["@typescript-eslint", "prettier", "import"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
     "project": "./tsconfig.json"
   },
   "env": {
     "node": true,
-    "es6": true
+    "browser": true
   },
-  "ignorePatterns": ["node_modules", "build", "dist", "public"],
   "rules": {
     "prettier/prettier": [
       "error",
       {
+        "bracketSpacing": true,
         "printWidth": 80,
         "semi": false,
         "singleQuote": true,
-        "tabWidth": 2,
         "trailingComma": "all",
-        "useTabs": false
+        "arrowParens": "always",
+        "endOfLine": "auto"
       }
     ],
-    "semi": "off",
     "import/order": [
       "error",
       {
