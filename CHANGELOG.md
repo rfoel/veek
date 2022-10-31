@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/rfoel/veek/compare/v5.1.1...v5.2.0) (2022-10-31)
+
+
+### Features
+
+* update service ([4c77de2](https://github.com/rfoel/veek/commit/4c77de2d39e81e31df46742be3f243ae42563175))
+
 ## [5.1.1](https://github.com/rfoel/veek/compare/v5.1.0...v5.1.1) (2022-03-26)
 
 
