@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@middy/core": "^3.6.2",
-    "got": "^12.5.2"
+    "got": "^12.5.3"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
