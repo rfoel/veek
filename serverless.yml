@@ -2,13 +2,24 @@ service: veek
 
 provider:
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs18.x
   region: us-east-1
   stage: ${opt:stage}
   timeout: 30
 
 plugins:
   - serverless-esbuild
+  - serverless-offline
+
+custom:
+  esbuild:
+    bundle: true
+    format: 'esm'
+    minify: false
+    platform: 'node'
+    target: 'node18'
+    watch:
+      pattern: ['**/*.ts']
 
 functions:
   checkin:
