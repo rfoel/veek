@@ -1,3 +1,20 @@
+# [6.0.0](https://github.com/rfoel/veek/compare/v5.2.1...v6.0.0) (2022-11-27)
+
+
+### Bug Fixes
+
+* update architecture ([0e4e691](https://github.com/rfoel/veek/commit/0e4e691096d81102c25be955ac04c5c6fd847f32))
+
+
+### Features
+
+* upgrade service to node v18 ([c515f78](https://github.com/rfoel/veek/commit/c515f7843dac22fcc04004b38be141cb348969ce))
+
+
+### BREAKING CHANGES
+
+* node 18
+
 ## [5.2.1](https://github.com/rfoel/veek/compare/v5.2.0...v5.2.1) (2022-11-27)
 
 
