@@ -1,11 +1,9 @@
 import type { Handler } from 'aws-lambda'
 
 import { checkin, getToken } from '../services/veek'
-import { CheckInEvent, CheckInResponse } from '../types'
+import { CheckInEvent } from '../types'
 
-export const handler: Handler = async (
-  event: CheckInEvent,
-): Promise<CheckInResponse> => {
+export const handler: Handler = async (event: CheckInEvent) => {
   const { accessToken } = await getToken(event)
-  return checkin(accessToken)
+  await checkin(accessToken)
 }

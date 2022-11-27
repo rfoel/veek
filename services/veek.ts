@@ -2,10 +2,7 @@ import { CheckInEvent, CheckInResponse, GetTokenResponse } from '../types'
 
 const baseUrl = 'https://services.live.veek.com.br'
 
-export const getToken = ({
-  username,
-  password,
-}: CheckInEvent): Promise<GetTokenResponse> =>
+export const getToken = ({ username, password }: CheckInEvent) =>
   fetch(`${baseUrl}/authenticator/oauth2/token`, {
     method: 'POST',
     headers: {
@@ -16,13 +13,13 @@ export const getToken = ({
       password,
       grantType: 'password',
     }),
-  }).then((response) => response.json())
+  }).then((response): Promise<GetTokenResponse> => response.json())
 
-export const checkin = (token: string): Promise<CheckInResponse> =>
+export const checkin = (token: string) =>
   fetch(`${baseUrl}/telecom/lines/checkin`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
     },
-  }).then((response) => response.json())
+  }).then((response): Promise<CheckInResponse> => response.json())
