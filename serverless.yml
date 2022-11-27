@@ -1,11 +1,14 @@
 service: veek
 
 provider:
+  architecture: arm64
+  logRetentionInDays: 1
   name: aws
-  runtime: nodejs18.x
   region: us-east-1
+  runtime: nodejs18.x
   stage: ${opt:stage}
   timeout: 30
+  versionFunctions: false
 
 plugins:
   - serverless-esbuild
