@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/rfoel/veek/compare/v6.0.0...v6.0.1) (2022-11-28)
+
+
+### Bug Fixes
+
+* output mjs file ([f94aaba](https://github.com/rfoel/veek/commit/f94aabaf391b35dc2ecd0d963fae2090a40b0856))
+
 # [6.0.0](https://github.com/rfoel/veek/compare/v5.2.1...v6.0.0) (2022-11-27)
 
 
