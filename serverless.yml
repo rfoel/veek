@@ -19,6 +19,8 @@ custom:
     bundle: true
     format: 'esm'
     minify: false
+    outExtension:
+      .js: .mjs
     platform: 'node'
     target: 'node18'
     watch:
