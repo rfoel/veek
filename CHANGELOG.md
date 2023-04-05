@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/rfoel/veek/compare/v6.0.1...v6.1.0) (2023-04-05)
+
+
+### Features
+
+* add logger ([963cf0a](https://github.com/rfoel/veek/commit/963cf0a1901ac392c1f9e1ff3f0acd38c7337b82))
+
 ## [6.0.1](https://github.com/rfoel/veek/compare/v6.0.0...v6.0.1) (2022-11-28)
 
 
