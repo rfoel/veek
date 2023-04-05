@@ -5,12 +5,11 @@ const baseUrl = 'https://services.live.veek.com.br'
 
 export const getToken = async ({ username, password }: CheckInEvent) => {
   const url = `${baseUrl}/authenticator/oauth2/token`
-  const headers = new Headers({
-    'Content-Type': 'application/json',
-  })
   const init = {
     method: 'POST',
-    headers,
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({
       username,
       password,
@@ -22,13 +21,12 @@ export const getToken = async ({ username, password }: CheckInEvent) => {
 
 export const checkin = (token: string) => {
   const url = `${baseUrl}/telecom/lines/checkin`
-  const headers = new Headers({
-    Authorization: `Bearer ${token}`,
-    'Content-Type': 'application/json',
-  })
   const init = {
     method: 'POST',
-    headers,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
   }
   return fetch<CheckInResponse>(url, init)
 }
