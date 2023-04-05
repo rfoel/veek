@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/rfoel/veek/compare/v6.1.0...v6.1.1) (2023-04-05)
+
+
+### Bug Fixes
+
+* fix request headers ([55be0be](https://github.com/rfoel/veek/commit/55be0be0fa616b1108a43db95031cca99ac3eddd))
+
 # [6.1.0](https://github.com/rfoel/veek/compare/v6.0.1...v6.1.0) (2023-04-05)
 
 
