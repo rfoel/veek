@@ -19,7 +19,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -40,7 +40,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -62,7 +62,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -86,16 +86,8 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      - name: 👀 Env
-        run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Git ref:    ${{ github.ref }}"
-          echo "GH actor:   ${{ github.actor }}"
-          echo "SHA:        ${{ github.sha }}"
-          VER=`node --version`; echo "Node ver:   $VER"
-          VER=`npm --version`; echo "npm ver:    $VER"
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 

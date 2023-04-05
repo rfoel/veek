@@ -1,25 +1,34 @@
 import { CheckInEvent, CheckInResponse, GetTokenResponse } from '../types'
+import fetch from '../utils/fetch'
 
 const baseUrl = 'https://services.live.veek.com.br'
 
-export const getToken = ({ username, password }: CheckInEvent) =>
-  fetch(`${baseUrl}/authenticator/oauth2/token`, {
+export const getToken = async ({ username, password }: CheckInEvent) => {
+  const url = `${baseUrl}/authenticator/oauth2/token`
+  const headers = new Headers({
+    'Content-Type': 'application/json',
+  })
+  const init = {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers,
     body: JSON.stringify({
       username,
       password,
       grantType: 'password',
     }),
-  }).then((response): Promise<GetTokenResponse> => response.json())
+  }
+  return fetch<GetTokenResponse>(url, init)
+}
 
-export const checkin = (token: string) =>
-  fetch(`${baseUrl}/telecom/lines/checkin`, {
+export const checkin = (token: string) => {
+  const url = `${baseUrl}/telecom/lines/checkin`
+  const headers = new Headers({
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+  })
+  const init = {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-    },
-  }).then((response): Promise<CheckInResponse> => response.json())
+    headers,
+  }
+  return fetch<CheckInResponse>(url, init)
+}
