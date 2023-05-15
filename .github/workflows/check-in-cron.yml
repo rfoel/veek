@@ -1,11 +1,11 @@
-name: Veek check-in
+name: Cron for Veek check-in
 
 on:
   schedule:
     - cron: '*/30 * * * *'
 
 jobs:
-  study:
+  check-in:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
