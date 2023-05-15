@@ -1,4 +1,4 @@
-name: Push to main
+name: Push to main branch
 
 on:
   push:
@@ -6,94 +6,17 @@ on:
       - main
 
 jobs:
-  lint:
-    name: ⬣ ESLint
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🔬 Lint
-        run: npm run lint
-
-  typecheck:
-    name: ʦ TypeScript
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🔎 Type check
-        run: npm run typecheck --if-present
-
   release:
-    needs: [lint, typecheck]
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
+      - uses: actions/checkout@v3
 
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+      - run: npm install
 
-      - name: 📦 Release
-        run: npx semantic-release
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  deploy:
-    needs: [lint, typecheck]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🚀 Production Deploy
-        run: npm run deploy
-        env:
-          CI: true
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

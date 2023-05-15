@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "lib": ["DOM", "ES2022"],
-    "module": "ES2022",
-    "moduleResolution": "node",
-    "target": "ES2022"
-  }
-}

@@ -1,14 +1,16 @@
 # veek
 
-Serverless function integrated with Event Bridge to run Veek's check-in on scheduled time.
+Use GitHub Actions to run Veek's check-in on scheduled time. It runs automatically every 30 minutes, but you can also trigger check-ins by dispatching the [check-in-manual.yml](.github/workflows/check-in-manual.yml) action.
 
 ## Usage
 
-Create an event rule with a fixed rate of `30 minutes` and with a constant JSON being the following:
+Clone this repository and create a repository secret with the following JSON:
 
 ```json
-{
-  "username": "string",
-  "password": "string"
-}
+[
+  {
+    "username": "string",
+    "password": "string"
+  }
+]
 ```

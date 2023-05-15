@@ -1,0 +1,25 @@
+name: Veek check-in
+
+on:
+  workflow_dispatch:
+    inputs:
+      check-ins:
+        default: 1
+        description: 'Number of check-ins to be done'
+        required: false
+        type: number
+
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: node index.js
+        env:
+          CHECK_INS: ${{ inputs.check-ins }}
+          VEEK_LINES: ${{ secrets.VEEK_LINES }}
