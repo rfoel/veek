@@ -19,7 +19,7 @@
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/aws-lambda": "^8.10.114",
-    "@types/node": "^18.15.11",
+    "@types/node": "^20.1.4",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "esbuild": "^0.17.15",
