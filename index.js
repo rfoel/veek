@@ -30,11 +30,52 @@ const checkin = accessToken => {
   return fetch(url, init).then(response => response.json())
 }
 
+const rewards = async accessToken => {
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  }
+
+  const [line] = await fetch(`${baseUrl}/telecom/lines`, {
+    headers,
+  }).then(response => response.json())
+
+  const [bonus, checkins] = await Promise.all([
+    fetch(`${baseUrl}/telecom/lines/${line.id}/bonus`, {
+      headers,
+    }).then(response => response.json()),
+    fetch(`${baseUrl}/telecom/checkins?lineId=${line.id}`, {
+      headers,
+    }).then(response => response.json()),
+  ])
+
+  if (bonus.available) {
+    await fetch(`${baseUrl}/telecom/lines/${line.id}/claim`, {
+      headers,
+      method: 'POST',
+    })
+  }
+
+  if (checkins.available) {
+    await fetch(`${baseUrl}/telecom/checkins/claim`, {
+      headers,
+      method: 'POST',
+      body: JSON.stringify({
+        params: {
+          lineId: line.id,
+        },
+      }),
+    })
+  }
+}
+
 for (const line of lines) {
   const { accessToken } = await getToken(line)
   const checkIns = process.env.CHECK_INS || 1
 
   for (let i = 0; i < checkIns; i++) {
-    await checkin(accessToken)
+    await checkin(accessToken, line).catch(error)
   }
+
+  await rewards(accessToken, line).catch(error)
 }
