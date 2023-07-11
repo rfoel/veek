@@ -74,8 +74,8 @@ for (const line of lines) {
   const checkIns = process.env.CHECK_INS || 1
 
   for (let i = 0; i < checkIns; i++) {
-    await checkin(accessToken, line).catch(error)
+    await checkin(accessToken, line).catch(console.log)
   }
 
-  await rewards(accessToken, line).catch(error)
+  await rewards(accessToken, line).catch(console.log)
 }
